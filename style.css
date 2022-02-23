@@ -1,0 +1,19 @@
+#texto-tarefa {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 200px;
+}
+
+#criar-tarefa {
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 25px;
+    border: 1px solid black;
+    font-size: 14px;
+    text-align: center;
+    width: 100px;
+    height: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
