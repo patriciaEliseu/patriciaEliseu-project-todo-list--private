@@ -21,23 +21,18 @@ let butom = document.addEventListener('click', function(event) {
     event.target.classList.add("pintar");
 })
 
-/* 8 - Não deve ser possível selecionar mais de um elemento da lista ao mesmo tempo
-**O que será verificado:**
-- Será verificado que, quando um elemento da lista é selecionado, o elemento selecionado
- previamente deixa de sê-lo. Isso é verificado através da presença ou não do estilo 
- `background-color: gray` no elemento. */
-/* let itemLista = document.querySelectorAll('li');
-for (let index = 0; index < itemLista.length; index += 1) {
-    console.log(itemLista[index]);
-} */
-/*  let colours = document.getElementsByClassName('color')
-for (let index = 0; index < colours.length; index += 1) {
-    /* console.log(colours[index]); */
-/*   colours[index].addEventListener('click', function(event) { */
-/* console.log(event.target); */
-/*   let selected = document.getElementsByClassName('selected')[0]; */
-/* console.log(selected); */
-/*  selected.classList.remove('selected');
-        event.target.classList.add('selected');
-    })
-} */
+let duploclick = document.addEventListener('dblclick', function(event) {
+    let lista1 = event.target;
+    lista1.classlist.toogle("completed");
+    let selected1 = document.getElementsByClassName('completed')[0];
+    selected1.classList.remove('completed');
+    event.target.classList.add('completed');
+
+})
+let apagaTudo = document.querySelector('#apaga-tudo');
+apagaTudo.addEventListener('click', function() {
+    let lista2 = document.querySelectorAll('li');
+    for (let index = 0; index < lista2.length; index += 1) {
+        lista2[index].remove()
+    }
+})
